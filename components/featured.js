@@ -3,7 +3,7 @@ import ProjectCard from "./component-cards/project-card";
 export default function Featured() {
   return (
     <div id="featured" className="py-10 px-10 bg-transparent ">
-      <p class="font-extrabold text-purple-400 mb-10 font-sans text-4xl">
+      <p className="font-extrabold text-purple-400 mb-10 font-sans text-4xl">
         Featured projects
       </p>
 

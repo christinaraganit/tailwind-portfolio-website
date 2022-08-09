@@ -14,7 +14,7 @@ export default function ProjectCard({
         <FaCode size={28} className="text-purple-200"></FaCode>
       </div>
 
-      <p class="text-center font-extrabold text-purple-200 mb-2 font-sans text-2xl">
+      <p className="text-center font-extrabold text-purple-200 mb-2 font-sans text-2xl">
         {projectName}
       </p>
 
@@ -25,7 +25,7 @@ export default function ProjectCard({
 
       <ol className="list-disc pl-5 text-l font-normal text-white mb-5">
         {tasksPerformed.map((task) => {
-          return <li>{task}</li>;
+          return <li key={task}>{task}</li>;
         })}
       </ol>
 
@@ -33,6 +33,7 @@ export default function ProjectCard({
         {Object.entries(buttonsLinked).map(([buttonText, buttonLink]) => {
           return (
             <a
+              key={buttonText + buttonLink.link}
               href={buttonLink.link}
               className="flex flex-row gap-3 rounded-lg font-medium w-fit text-zinc-800 bg-purple-200 p-4 border border-zinc-700"
             >

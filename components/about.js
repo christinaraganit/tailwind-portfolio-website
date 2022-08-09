@@ -6,10 +6,10 @@ import { FaComments } from "react-icons/fa";
 export default function About() {
   return (
     <div id="about" className="py-10 px-10 text-l bg-transparent ">
-      <p class="font-extrabold text-purple-400 mb-5 font-sans text-4xl">
+      <p className="font-extrabold text-purple-400 mb-5 font-sans text-4xl">
         About me
       </p>
-      <p class="font-extrabold text-purple-200 mb-5 font-sans text-2xl">
+      <p className="font-extrabold text-purple-200 mb-5 font-sans text-2xl">
         Hi, I'm Eric 👋
       </p>
       <p className="text-white mb-5">
