@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <div id="header" className="top-0 h-20 z-100 w-full fixed">
-      <div className="p-5 flex flex-col items-end backdrop-blur-lg border-b-2 border-b-zinc-800">
+      <div className="p-5 flex flex-col items-end bg-zinc-900/40 backdrop-blur-lg border-b-2 border-b-zinc-800">
         <HiOutlineMenuAlt3
           size={36}
           className="text-purple-200"

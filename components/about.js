@@ -5,8 +5,11 @@ import { FaComments } from "react-icons/fa";
 
 export default function About() {
   return (
-    <div id="about" className="py-10 px-10 text-l bg-transparent ">
-      <p className="font-extrabold text-purple-400 mb-5 font-sans text-4xl">
+    <div
+      id="about"
+      className="py-10 px-10 md:py-0 md:pb-10 md:px-20 text-l bg-transparent"
+    >
+      <p className="font-extrabold md:text-center md:text-4xl text-purple-400 mb-5 font-sans text-4xl md:text-purple-300 md:underline md:decoration-8 md:offset-0 md:decoration-purple-500">
         About me
       </p>
       <p className="font-extrabold text-purple-200 mb-5 font-sans text-2xl">
@@ -28,23 +31,31 @@ export default function About() {
       </p>
 
       <ol className="list-disc text-l px-10 font-normal text-white mb-10">
-        <li>Java</li>
-        <li>React</li>
-        <li>C#</li>
-        <li>C++</li>
-        <li>C</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>MySQL</li>
-        <li>MongoDB</li>
-        <li>Google Firebase</li>
-        <li>Docker</li>
-        <li>.NET</li>
-        <li>Django</li>
-        <li>NodeJS</li>
-        <li>Angular</li>
+        <div className="md:flex md:flex-row md:justify-between">
+          <div>
+            <li>Java</li>
+            <li>React</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>C</li>
+            <li>NodeJS</li>
+          </div>
+          <div>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>MySQL</li>
+          </div>
+          <div>
+            <li>Angular</li>
+            <li>MongoDB</li>
+            <li>Google Firebase</li>
+            <li>Docker</li>
+            <li>.NET</li>
+            <li>Django</li>
+          </div>
+        </div>
       </ol>
 
       <p className="text-l text-white mb-5">

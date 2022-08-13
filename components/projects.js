@@ -3,7 +3,7 @@ import SmallProjectCard from "./component-cards/small-project-card";
 export default function Projects() {
   return (
     <div id="featured" className="py-10 px-10 bg-transparent ">
-      <p className="font-extrabold text-purple-400 mb-10 font-sans text-4xl">
+      <p className="font-extrabold text-purple-400 mb-10 font-sans text-4xl md:text-center md:text-4xl mb-10 font-sans text-4xl md:text-purple-300 md:underline md:decoration-8 md:offset-0 md:decoration-purple-500">
         All projects
       </p>
 
