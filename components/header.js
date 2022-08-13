@@ -3,32 +3,65 @@ import { IoMdClose } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaEnvelopeOpen } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [top, setTop] = useState(true);
+
+  useEffect(() => {
+    const changeBackground = (e) => {
+      let scrolled = document.scrollingElement.scrollTop;
+      let header = document.getElementById("headerBar");
+      if (scrolled > header.clientHeight) {
+        if (top) {
+          header.classList.remove("bg-transparent");
+          header.classList.add(
+            "bg-zinc-900/40",
+            "backdrop-blur-lg",
+            "border-b-2",
+            "border-b-zinc-800"
+          );
+          setTop(false);
+        }
+      } else {
+        if (!top) {
+          header.classList.remove(
+            "bg-zinc-900/40",
+            "backdrop-blur-lg",
+            "border-b-2",
+            "border-b-zinc-800"
+          );
+          header.classList.add("bg-transparent");
+          setTop(true);
+        }
+      }
+    };
+    document.addEventListener("scroll", changeBackground);
+    return () => {
+      document.removeEventListener("scroll", changeBackground);
+    };
+  }, [top]);
 
   const openMenu = () => {
     let mobileMenu = document.getElementById("mobile-menu");
-    let links = document.getElementById("mobile-menu-links");
     if (!open) {
       mobileMenu.classList.remove("h-0");
       mobileMenu.classList.add("h-screen");
-      // document.body.setAttribute("style", "height: 100%");
-      // document.body.getAttribute("style").add("margin: 0");
-      // links.classList.remove("hidden");
       setOpen(true);
     } else {
       mobileMenu.classList.add("h-0");
       mobileMenu.classList.remove("h-screen");
-      // links.classList.add("hidden");
       setOpen(false);
     }
   };
 
   return (
     <div id="header" className="top-0 h-20 z-100 w-full fixed">
-      <div className="p-5 flex flex-col items-end bg-zinc-900/40 backdrop-blur-lg border-b-2 border-b-zinc-800">
+      <div
+        id="headerBar"
+        className="p-5 flex flex-col items-end bg-transparent"
+      >
         <HiOutlineMenuAlt3
           size={36}
           className="text-purple-200"
