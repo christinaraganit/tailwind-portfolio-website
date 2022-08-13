@@ -11,8 +11,8 @@ export default function Home() {
     <div id="home">
       <div id="title" className="h-screen">
         <img
-          src="background-4.jpg"
-          className="z-0 fixed opacity-30 w-full max-w-sm blur-3xl top-0 right-10"
+          src="purple-blur.png"
+          className="z-0 fixed w-120 opacity-60 max-w-sm blur-3xl top-10 right-0"
         ></img>
 
         <Header></Header>
