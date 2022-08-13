@@ -3,10 +3,36 @@ import { IoMdClose } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaEnvelopeOpen } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [top, setTop] = useState(true);
+
+  useEffect(() => {
+    const changeBackground = e => {
+      let scrolled = document.scrollingElement.scrollTop;
+      let header = document.getElementById("header");
+      console.log(scrolled);
+      if (scrolled > header.clientHeight) {
+        if (top) {
+          header.classList.remove("bg-transparent");
+          header.classList.add("bg-zinc-900/40",  "backdrop-blur-lg", "border-b-2", "border-b-zinc-800")
+          setTop(false);
+        } 
+      } else {
+        if (!top) {
+          header.classList.remove("bg-zinc-900/40",  "backdrop-blur-lg", "border-b-2", "border-b-zinc-800");
+          header.classList.add("bg-transparent");
+          setTop(true);
+        }
+      }
+    }
+    document.addEventListener("scroll", changeBackground);
+    return () => {
+      document.removeEventListener("scroll", changeBackground);
+    }
+  }, [top])
 
   const openMenu = () => {
     let mobileMenu = document.getElementById("mobile-menu");
@@ -30,7 +56,7 @@ export default function Header() {
   return (
     <div
       id="header"
-      className="top-0 h-20 z-100 w-full fixed bg-zinc-900/40 border-b-2 border-b-zinc-800"
+      className="top-0 h-20 z-100 w-full fixed bg-transparent"
     >
       <div className="p-5 flex flex-col items-end backdrop-blur-lg">
         <HiOutlineMenuAlt3 size={36} className="text-purple-200" onClick={() => openMenu()}></HiOutlineMenuAlt3>
