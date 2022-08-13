@@ -3,6 +3,8 @@ import Hero from "../components/hero";
 import About from "../components/about";
 import Featured from "../components/featured";
 import Footer from "../components/footer";
+import Projects from "../components/projects";
+import React, { useEffect, useState } from "react";
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
       <div id="title" className="h-screen">
         <img
           src="background-4.jpg"
-          className="z-0 fixed opacity-40 w-full max-w-sm blur-3xl top-0 right-5"
+          className="z-0 fixed opacity-30 w-full max-w-sm blur-3xl top-0 right-10"
         ></img>
 
         <Header></Header>
@@ -26,6 +28,7 @@ export default function Home() {
       <div id="more-content">
         <About></About>
         <Featured></Featured>
+        <Projects></Projects>
       </div>
 
       <Footer></Footer>

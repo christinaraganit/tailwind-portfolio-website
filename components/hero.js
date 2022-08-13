@@ -10,7 +10,7 @@ export default function Hero() {
       <p className="text-xl text-white mb-10">
         I am a full-stack developer who likes coding and eating rice. 🍚
       </p>
-      <button className="flex w-fit h-fit gap-2 rounded-lg font-medium bg-purple-500 p-4 text-xl text-white">
+      <button className="flex w-fit h-fit gap-2 rounded-lg font-medium bg-purple-500 hover:bg-purple-600 p-4 text-xl text-white">
         <BiCodeBlock size={28}></BiCodeBlock>
         View my resume
       </button>

@@ -35,7 +35,7 @@ export default function ProjectCard({
             <a
               key={buttonText + buttonLink.link}
               href={buttonLink.link}
-              className="flex flex-row gap-3 rounded-lg font-medium w-fit text-zinc-800 bg-purple-200 p-4 border border-zinc-700"
+              className="flex hover:bg-purple-300 flex-row gap-3 rounded-lg font-medium w-fit text-zinc-800 bg-purple-200 p-4 border border-zinc-700"
             >
               {
                 {

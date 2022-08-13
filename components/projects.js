@@ -1,0 +1,41 @@
+import SmallProjectCard from "./component-cards/small-project-card";
+
+export default function Projects() {
+  return (
+    <div id="featured" className="py-10 px-10 bg-transparent ">
+      <p className="font-extrabold text-purple-400 mb-10 font-sans text-4xl">
+        All projects
+      </p>
+
+      <SmallProjectCard
+        projectName="Yordle"
+        technologiesUsed={["React", "HTML", "CSS", "JavaScript"]}
+        description="A League of Legends-themed word game based on New York Times' Wordle."
+        projectType="WEB"
+        link="#"
+        linkTag="View on GitHub"
+        date="January 2022"
+      ></SmallProjectCard>
+
+      <SmallProjectCard
+        projectName="Onigiri"
+        technologiesUsed={["Angular", "HTML", "CSS", "JavaScript"]}
+        description="A web application tracking your favorite manga and anime."
+        projectType="RICE"
+        link="#"
+        linkTag="View on browser"
+        date="Work in progress"
+      ></SmallProjectCard>
+
+      <SmallProjectCard
+        projectName="Task manager"
+        technologiesUsed={["Google Firebase", "HTML", "CSS", "JavaScript"]}
+        description="A web application for managing your tasks."
+        projectType="TASK"
+        link="#"
+        linkTag="View on GitHub"
+        date="December 2019"
+      ></SmallProjectCard>
+    </div>
+  );
+}
