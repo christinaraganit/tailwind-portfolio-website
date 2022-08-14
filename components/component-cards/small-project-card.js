@@ -54,7 +54,9 @@ export default function SmallProjectCard({
         {technologiesUsed.join(", ")}
       </p>
 
-      <p className="text-l font-normal text-white">{description}</p>
+      <p className="text-l font-normal text-white md:text-center">
+        {description}
+      </p>
     </div>
   );
 }

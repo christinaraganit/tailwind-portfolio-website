@@ -9,7 +9,7 @@ export default function ProjectCard({
   buttonsLinked,
 }) {
   return (
-    <div className="bg-zinc-800 border border-zinc-700 p-5 md:px-10 md:py-8 rounded-lg mb-5">
+    <div className="bg-zinc-800 border border-zinc-700 p-5 md:px-10 md:py-8 rounded-lg">
       <div className="flex mb-5 justify-center align-center">
         <FaCode size={28} className="text-purple-200"></FaCode>
       </div>

@@ -7,12 +7,12 @@ export default function About() {
   return (
     <div
       id="about"
-      className="py-10 px-10 md:py-0 md:pb-10 md:px-20 text-l bg-transparent"
+      className="py-10 px-10 md:py-0 md:pb-10 md:px-20 text-l bg-transparent lg:mx-10"
     >
-      <p className="font-extrabold md:text-center md:text-4xl text-purple-400 mb-5 font-sans text-4xl md:text-purple-300 md:underline md:decoration-8 md:offset-0 md:decoration-purple-500">
+      <p className="font-extrabold md:text-center lg:text-left md:text-4xl text-purple-400 mb-5 font-sans text-4xl lg:text-5xl md:text-purple-300 md:underline md:decoration-8 md:offset-0 md:decoration-purple-500">
         About me
       </p>
-      <p className="font-extrabold text-purple-200 mb-5 font-sans text-2xl">
+      <p className="font-extrabold text-purple-200 mb-5 font-sans text-2xl lg:text-3xl">
         Hi, I'm Eric 👋
       </p>
       <p className="text-white mb-5">
@@ -26,12 +26,12 @@ export default function About() {
         position as a full-stack developer or software developer.
       </p>
 
-      <p className="font-extrabold text-purple-200 mb-5 font-sans text-2xl">
+      <p className="font-extrabold text-purple-200 mb-5 font-sans text-2xl lg:text-3xl">
         Technologies 💻
       </p>
 
       <ol className="list-disc text-l px-10 font-normal text-white mb-10">
-        <div className="md:flex md:flex-row md:justify-between">
+        <div className="md:flex md:flex-row md:justify-between lg:justify-start lg:gap-40">
           <div>
             <li>Java</li>
             <li>React</li>
@@ -46,6 +46,7 @@ export default function About() {
             <li>JavaScript</li>
             <li>Python</li>
             <li>MySQL</li>
+            <li>Tailwind CSS</li>
           </div>
           <div>
             <li>Angular</li>

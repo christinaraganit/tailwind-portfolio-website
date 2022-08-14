@@ -9,17 +9,15 @@ import React, { useEffect, useState } from "react";
 export default function Home() {
   return (
     <div id="home">
-      <div id="title" className="h-screen md:h-5/6 md:my-20">
-        <img
-          src="purple-blur.png"
-          className="z-0 fixed w-screen md:w-2/3 right-0 opacity-50 blur-3xl md:top-40 top-20 md:left-0 md:opacity-40"
-        ></img>
-
+      <div
+        id="title"
+        className="h-screen md:h-5/6 md:py-40 lg:h-screen lg:my-0"
+      >
         <Header></Header>
 
         <div
           id="content"
-          className="pt-20 h-full flex bg-transparent content-center justify-center"
+          className="pt-20 h-full flex bg-transparent content-center justify-center lg:content-start lg:justify-start lg:mx-20"
         >
           <Hero></Hero>
         </div>
